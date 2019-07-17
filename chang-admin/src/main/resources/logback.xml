@@ -8,7 +8,8 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     <!-- 设置上下文名称 -->
     <contextName>chang-admin-logging</contextName>
     <!-- 日志存放路径 -->
-	<property name="log.path" value="/home/ruoyi/logs" />
+<!--	<property name="log.path" value="/home/ruoyi/logs" />-->
+	<property name="log.path" value="G:\\chang_log/logs" />
     <!-- 日志输出格式 -->
 	<property name="log.pattern" value="%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{30} - [%method,%line] - %msg%n" />
 
@@ -41,6 +42,28 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
             <onMismatch>DENY</onMismatch>
         </filter>
 	</appender>
+
+    <appender name="file_warn" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/sys-warn.log</file>
+        <!-- 循环政策：基于时间创建日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件名格式 -->
+            <fileNamePattern>${log.path}/sys-warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${log.pattern}</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 过滤的级别 -->
+            <level>WARN</level>
+            <!-- 匹配时的操作：接收（记录） -->
+            <onMatch>ACCEPT</onMatch>
+            <!-- 不匹配时的操作：拒绝（不记录） -->
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
 	
 	<appender name="file_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
 	    <file>${log.path}/sys-error.log</file>
@@ -90,6 +113,7 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
 	<!--系统操作日志-->
     <root level="info">
         <appender-ref ref="file_info" />
+        <appender-ref ref="file_warn" />
         <appender-ref ref="file_error" />
     </root>
 	
@@ -97,4 +121,4 @@ debug:当此属性设置为true时，将打印出logback内部日志信息，实
     <logger name="sys-user" level="info">
         <appender-ref ref="sys-user"/>
     </logger>
-</configuration> 
+</configuration>

@@ -6,16 +6,15 @@
 
     <groupId>com.chang</groupId>
     <artifactId>chang</artifactId>
-    <version>${chang.version}</version>
+    <version>1.0.0</version>
 
     <packaging>pom</packaging>
 
     <name>chang</name>
-    <url></url>
+<!--    <url></url>-->
     <description>基于若依的演示框架</description>
 
     <properties>
-        <chang.version>1.0.0</chang.version>
     </properties>
 
     <parent>
