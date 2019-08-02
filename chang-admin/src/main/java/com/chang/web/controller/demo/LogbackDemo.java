@@ -1,4 +1,4 @@
-package com.chang.changadmin.web.controller.demo;
+package com.chang.web.controller.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

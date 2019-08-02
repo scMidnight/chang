@@ -196,10 +196,10 @@
     </dependencyManagement>
 
     <modules>
-        <module>chang-admin</module>
-        <module>chang-framework</module>
-        <module>chang-system</module>
-
         <module>chang-common</module>
+        <module>chang-system</module>
+        <module>chang-framework</module>
+        <module>chang-admin</module>
+
     </modules>
 </project>

@@ -1,4 +1,4 @@
-package com.chang.changadmin.web.controller.demo;
+package com.chang.web.controller.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
