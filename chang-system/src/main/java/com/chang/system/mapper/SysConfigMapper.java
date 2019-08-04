@@ -1,6 +1,8 @@
 package com.chang.system.mapper;
 
 import com.chang.system.domain.SysConfig;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -9,6 +11,7 @@ import java.util.List;
  * @Date: 2019/8/2 14:29
  * @Description: 参数配置 数据层
  */
+//@Mapper
 public interface SysConfigMapper {
 
     /**
