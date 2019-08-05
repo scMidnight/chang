@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author: SunChang
  * @Date: 2019/8/2 11:16
- * @Description:
+ * @Description: 操作日志记录处理
  */
 @Aspect
 @Component

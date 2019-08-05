@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 /**
  * @author: SunChang
  * @Date: 2019/8/2 13:39
- * @Description:
+ * @Description: 角色表 UD_SYS_ROLE
  */
 public class SysRole extends BaseEntity {
 
