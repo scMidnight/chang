@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -18,11 +19,11 @@ public class SysDictData extends BaseEntity {
     private static final long serialVersionUID = 8580906426406403177L;
 
     /** 字典编码 */
-    @Excel(name = "字典编码")
+    @Excel(name = "字典编码", cellType = ColumnType.NUMERIC)
     private Long dictCode;
 
     /** 字典排序 */
-    @Excel(name = "字典排序")
+    @Excel(name = "字典排序", cellType = ColumnType.NUMERIC)
     private Long dictSort;
 
     /** 字典标签 */

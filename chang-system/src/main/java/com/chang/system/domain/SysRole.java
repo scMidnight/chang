@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -18,7 +19,7 @@ public class SysRole extends BaseEntity {
     private static final long serialVersionUID = 8060321101656920632L;
 
     /** 角色ID */
-    @Excel(name = "角色序号")
+    @Excel(name = "角色序号", cellType = ColumnType.NUMERIC)
     private Long roleId;
 
     /** 角色名称 */
@@ -30,7 +31,7 @@ public class SysRole extends BaseEntity {
     private String roleKey;
 
     /** 角色排序 */
-    @Excel(name = "角色排序")
+    @Excel(name = "角色排序", cellType = ColumnType.NUMERIC)
     private String roleSort;
 
     /** 数据范围（1：所有数据权限；2：自定义数据权限；3：本部门数据权限；4：本部门及以下数据权限） */

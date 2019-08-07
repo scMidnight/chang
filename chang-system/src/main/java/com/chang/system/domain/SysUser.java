@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.annotation.Excel.Type;
 import com.chang.common.annotation.Excels;
 import com.chang.common.core.domain.BaseEntity;
@@ -24,7 +25,7 @@ public class SysUser extends BaseEntity {
     private static final long serialVersionUID = 5266872100054040665L;
 
     /** 用户ID */
-    @Excel(name = "用户序号", prompt = "用户编号")
+    @Excel(name = "用户序号", prompt = "用户编号", cellType = ColumnType.NUMERIC)
     private Long userId;
 
     /** 部门ID */

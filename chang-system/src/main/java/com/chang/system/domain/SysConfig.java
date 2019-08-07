@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -18,7 +19,7 @@ public class SysConfig extends BaseEntity {
     private static final long serialVersionUID = 5205728318603757888L;
 
     /** 参数主键 */
-    @Excel(name = "参数主键")
+    @Excel(name = "参数主键", cellType = ColumnType.NUMERIC)
     private Long configId;
 
     /** 参数名称 */

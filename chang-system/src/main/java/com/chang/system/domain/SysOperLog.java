@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -17,7 +18,7 @@ public class SysOperLog extends BaseEntity {
     private static final long serialVersionUID = 5841221679403593095L;
 
     /** 日志主键 */
-    @Excel(name = "操作序号")
+    @Excel(name = "操作序号", cellType = ColumnType.NUMERIC)
     private Long operId;
 
     /** 操作模块 */

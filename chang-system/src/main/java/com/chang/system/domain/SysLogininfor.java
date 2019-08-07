@@ -1,6 +1,7 @@
 package com.chang.system.domain;
 
 import com.chang.common.annotation.Excel;
+import com.chang.common.annotation.Excel.ColumnType;
 import com.chang.common.core.domain.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -17,7 +18,7 @@ public class SysLogininfor extends BaseEntity {
     private static final long serialVersionUID = 4588455232023674841L;
 
     /** ID */
-    @Excel(name = "序号")
+    @Excel(name = "序号", cellType = ColumnType.NUMERIC)
     private Long infoId;
 
     /** 用户账号 */
